@@ -4,9 +4,19 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">About</string>
-    <string name="previous">Back</string>
+    <string name="about">About</string>
+    <string name="back">Back</string>
 
     <string name="hello_first_fragment">Hello World!</string>
     <string name="author">Author: Weihan Liu \nEmail: liu.weih@northeastern.edu</string>
+
+    <!-- Strings used for clicky table-->
+    <string name="clickyA">A</string>
+    <string name="clickyB">B</string>
+    <string name="clickyC">C</string>
+    <string name="clickyD">D</string>
+    <string name="clickyE">E</string>
+    <string name="clickyF">F</string>
+    <string name="clickyPressed">Pressed: %1$s</string>
+    <string name="clickyMainButtonText">Clicky</string>
 </resources>

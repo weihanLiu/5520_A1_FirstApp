@@ -9,9 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Nothing here yet..", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        Button clicky = findViewById(R.id.clicky_main_button);
+        clicky.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickyActivity();
             }
         });
     }
@@ -52,5 +62,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void clickyActivity(){
+        Intent intent = new Intent(this, ClickyActivity.class);
+        startActivity(intent);
     }
 }
