@@ -19,4 +19,7 @@
     <string name="clickyF">F</string>
     <string name="clickyPressed">Pressed: %1$s</string>
     <string name="clickyMainButtonText">Clicky</string>
+
+    <!-- String used for link collector-->
+    <string name="linkCollectorMain">Link Collector</string>
 </resources>

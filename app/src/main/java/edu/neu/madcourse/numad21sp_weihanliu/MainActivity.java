@@ -37,7 +37,15 @@ public class MainActivity extends AppCompatActivity {
         clicky.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickyActivity();
+                newActivity();
+            }
+        });
+
+        Button linkCollector = findViewById(R.id.link_collector_button);
+        clicky.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newActivity();
             }
         });
     }
@@ -64,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void clickyActivity(){
+    public void newActivity(){
         Intent intent = new Intent(this, ClickyActivity.class);
         startActivity(intent);
     }
