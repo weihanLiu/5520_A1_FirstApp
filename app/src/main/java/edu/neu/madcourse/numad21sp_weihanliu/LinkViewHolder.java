@@ -20,7 +20,8 @@ public class LinkViewHolder extends RecyclerView.ViewHolder {
                 if(listener != null) {
                     int position = getLayoutPosition();
                     if(position != RecyclerView.NO_POSITION) {
-                        listener.onItemClick(position);
+                        LinkCollectorActivity activity = new LinkCollectorActivity();
+                        listener.onItemClick(position, activity);
                     }
                 }
             }

@@ -31,4 +31,5 @@
     <string name="empty_string_warning">Name or URL cannot be empty</string>
     <string name="add_success_msg">Link successfully added to list.</string>
     <string name="invalid_url_warning">Invalid URL</string>
+    <string name="item_deleted">Item deleted.</string>
 </resources>
