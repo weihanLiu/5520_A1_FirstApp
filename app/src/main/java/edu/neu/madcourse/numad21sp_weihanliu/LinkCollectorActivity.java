@@ -159,7 +159,6 @@ public class LinkCollectorActivity extends AppCompatActivity {
 
     private void addItem(int position, String name, String url, View view) {
         itemList.add(position, new LinkItemCard(name, url));
-        Toast.makeText(LinkCollectorActivity.this, "Add an item", Toast.LENGTH_SHORT).show();
         linkViewAdapter.notifyItemInserted(position);
         Snackbar.make(view,R.string.add_success_msg,
                 Snackbar.LENGTH_LONG).show();
