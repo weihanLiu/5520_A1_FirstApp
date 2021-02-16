@@ -22,4 +22,7 @@
 
     <!-- String used for link collector-->
     <string name="linkCollectorMain">Link Collector</string>
+    <string name="addLinkDescription">Click to add a link</string>
+    <string name="link_item_name">Name</string>
+    <string name="link_item_url">URL</string>
 </resources>
