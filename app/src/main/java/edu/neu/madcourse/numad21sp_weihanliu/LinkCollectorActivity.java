@@ -137,10 +137,9 @@ public class LinkCollectorActivity extends AppCompatActivity {
                         String nameString = linkname.getText().toString();
                         String urlString = linkurl.getText().toString();
                         if(nameString.equals("") || urlString.equals("")) {
-                            Toast.makeText(LinkCollectorActivity.this, R.string.empty_string_warning, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LinkCollectorActivity.this, R.string.empty_string_warning, Toast.LENGTH_LONG).show();
                         } else if(!Patterns.WEB_URL.matcher(urlString).matches()) {
-                            Snackbar.make(view,R.string.invalid_url_warning,
-                                    Snackbar.LENGTH_LONG).show();
+                            Toast.makeText(LinkCollectorActivity.this, R.string.invalid_url_warning, Toast.LENGTH_LONG).show();
                         } else {
                             addItem(pos,nameString,urlString,view);
                         }
