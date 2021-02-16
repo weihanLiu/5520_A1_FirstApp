@@ -1,18 +1,25 @@
 package edu.neu.madcourse.numad21sp_weihanliu;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 public class LinkCollectorActivity extends AppCompatActivity {
     private ArrayList<LinkItemCard> itemList = new ArrayList<>();
@@ -32,7 +39,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int pos = 0;
-                addItem(pos);
+                showInputDialog(pos,v);
             }
         });
 
@@ -76,12 +83,46 @@ public class LinkCollectorActivity extends AppCompatActivity {
     }
 
 
-    private void addItem(int position) {
-        //TODO:start pop up window for input
-        itemList.add(position, new LinkItemCard("Default Name", "Default URL"));
-        Toast.makeText(LinkCollectorActivity.this, "Add an item", Toast.LENGTH_SHORT).show();
+    private void showInputDialog(int pos, View view) {
+        LayoutInflater inflater = LayoutInflater.from(LinkCollectorActivity.this);
+        View input = inflater.inflate(R.layout.add_link_prompt,null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(LinkCollectorActivity.this);
+        final EditText linkname = input.findViewById(R.id.link_prompt_name);
+        final EditText linkurl = input.findViewById(R.id.link_prompt_url);
+        builder.setView(input)
+                .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String nameString = linkname.getText().toString();
+                        String urlString = linkurl.getText().toString();
+                        if(nameString.equals("") || urlString.equals("")) {
+                            Toast.makeText(LinkCollectorActivity.this, R.string.empty_string_warning, Toast.LENGTH_SHORT).show();
+                        } else if(!Patterns.WEB_URL.matcher(urlString).matches()) {
+                            Snackbar.make(view,R.string.invalid_url_warning,
+                                    Snackbar.LENGTH_LONG).show();
+                        } else {
+                            addItem(pos,nameString,urlString,view);
+                        }
+                    }
+                })
+                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                })
+                .setCancelable(false);
+        builder.create();
+        builder.show();
+    }
 
+
+    private void addItem(int position, String name, String url, View view) {
+        itemList.add(position, new LinkItemCard(name, url));
+        Toast.makeText(LinkCollectorActivity.this, "Add an item", Toast.LENGTH_SHORT).show();
         linkViewAdapter.notifyItemInserted(position);
+        Snackbar.make(view,R.string.add_success_msg,
+                Snackbar.LENGTH_LONG).show();
     }
 
 

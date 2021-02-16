@@ -23,6 +23,12 @@
     <!-- String used for link collector-->
     <string name="linkCollectorMain">Link Collector</string>
     <string name="addLinkDescription">Click to add a link</string>
-    <string name="link_item_name">Name</string>
+    <string name="link_item_name">Link Name</string>
     <string name="link_item_url">URL</string>
+    <string name="add_link_prompt_title">Add a link…</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_string_warning">Name or URL cannot be empty</string>
+    <string name="add_success_msg">Link successfully added to list.</string>
+    <string name="invalid_url_warning">Invalid URL</string>
 </resources>
