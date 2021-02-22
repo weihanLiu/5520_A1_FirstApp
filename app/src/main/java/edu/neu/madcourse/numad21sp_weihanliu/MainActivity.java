@@ -48,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 linkCollectorActivity();
             }
         });
+
+        Button locator = findViewById(R.id.locator_button);
+        locator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                locatorActivity();
+            }
+        });
     }
 
     @Override
@@ -81,4 +89,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LinkCollectorActivity.class);
         startActivity(intent);
     }
+
+    public void locatorActivity(){
+        Intent intent = new Intent(this, Locator.class);
+        startActivity(intent);
+    }
+
+
 }

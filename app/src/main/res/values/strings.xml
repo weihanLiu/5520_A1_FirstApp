@@ -32,4 +32,8 @@
     <string name="add_success_msg">Link successfully added to list.</string>
     <string name="invalid_url_warning">Invalid URL</string>
     <string name="item_deleted">Item deleted.</string>
+
+    <!-- String used for Locator-->
+    <string name="locator_main_button">Locator</string>
+
 </resources>
