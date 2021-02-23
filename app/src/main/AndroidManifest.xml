@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.neu.madcourse.numad21sp_weihanliu">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_wl"
@@ -22,6 +25,7 @@
 
         <activity android:name=".ClickyActivity" />
         <activity android:name=".LinkCollectorActivity"/>
+        <activity android:name=".Locator"/>
     </application>
 
 </manifest>
