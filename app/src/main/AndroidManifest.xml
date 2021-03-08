@@ -25,7 +25,7 @@
 
         <activity android:name=".ClickyActivity" />
         <activity android:name=".LinkCollectorActivity"/>
-        <activity android:name=".Locator"/>
+        <activity android:name=".LocatorActivity"/>
     </application>
 
 </manifest>

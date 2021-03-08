@@ -99,12 +99,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void locatorActivity(){
-        Intent intent = new Intent(this, Locator.class);
+        Intent intent = new Intent(this, LocatorActivity.class);
         startActivity(intent);
     }
 
     public void serviceActivity(){
-        Intent intent = new Intent(this, JokeService.class);
+        Intent intent = new Intent(this, JokeServiceActivity.class);
         startActivity(intent);
     }
 

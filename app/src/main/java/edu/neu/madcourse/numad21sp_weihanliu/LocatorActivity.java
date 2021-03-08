@@ -21,7 +21,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 
-public class Locator extends AppCompatActivity implements LocationListener {
+public class LocatorActivity extends AppCompatActivity implements LocationListener {
 
     TextView display;
     LocationManager locationManager;
@@ -66,7 +66,7 @@ public class Locator extends AppCompatActivity implements LocationListener {
     private void getPermission() {
         isGPSEnable = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         if(!isGPSEnable) {
-            androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(Locator.this);
+            androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(LocatorActivity.this);
             builder.setMessage(R.string.gps_not_enabled)
                     .setPositiveButton(R.string.settings, new DialogInterface.OnClickListener() {
                         @Override
