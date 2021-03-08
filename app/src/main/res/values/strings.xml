@@ -24,7 +24,7 @@
     <string name="clickyPressed">Pressed: %1$s</string>
     <string name="clickyMainButtonText">Clicky</string>
 
-    <!-- String used for link collector-->
+    <!-- Strings used for link collector-->
     <string name="linkCollectorMain">Link Collector</string>
     <string name="addLinkDescription">Click to add a link</string>
     <string name="link_item_name">Link Name</string>
@@ -36,11 +36,15 @@
     <string name="invalid_url_warning">Invalid URL</string>
     <string name="item_deleted">Item deleted.</string>
 
-    <!-- String used for Locator-->
+    <!-- Strings used for Locator-->
     <string name="locator_main_button">Locator</string>
     <string name="location_display">Latitude:%1$f \nLongitude:%2$f</string>
     <string name="gps_not_enabled">GPS not enabled.</string>
     <string name="location_permission_required">Location and GPS permission required</string>
+
+
+    <!-- Strings used for Web Service-->
+    <string name="service_button">At Your Service</string>
 
 
 </resources>

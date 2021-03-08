@@ -56,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 locatorActivity();
             }
         });
+
+        Button service = findViewById(R.id.service_button);
+        locator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                serviceActivity();
+            }
+        });
     }
 
     @Override
@@ -92,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void locatorActivity(){
         Intent intent = new Intent(this, Locator.class);
+        startActivity(intent);
+    }
+
+    public void serviceActivity(){
+        Intent intent = new Intent(this, JokeService.class);
         startActivity(intent);
     }
 
