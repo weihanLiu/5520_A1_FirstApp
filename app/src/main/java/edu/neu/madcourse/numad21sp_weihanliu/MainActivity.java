@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button service = findViewById(R.id.service_button);
-        locator.setOnClickListener(new View.OnClickListener() {
+        Button service = findViewById(R.id.joke_service_button);
+        service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 serviceActivity();
