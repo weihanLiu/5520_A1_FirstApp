@@ -45,7 +45,7 @@
 
     <!-- Strings used for Web Service-->
     <string name="service_button">At Your Service</string>
-    Wait for it…<string name="joke_default">Wait for it…</string>
+    <string name="joke_default">Wait for it…</string>
     <string name="get_joke_button">Give me a joke</string>
     <string name="show">Tap To Show</string>
     <string name="no_response_warning">Something went wrong! \nCheck your internet connection.</string>

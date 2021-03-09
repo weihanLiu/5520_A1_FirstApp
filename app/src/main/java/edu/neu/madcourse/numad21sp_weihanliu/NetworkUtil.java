@@ -17,26 +17,6 @@ import java.net.URL;
  */
 public final class NetworkUtil {
 
-    public static class MyException extends Exception {
-        public MyException() {
-        }
-
-        public MyException(String message) {
-            super(message);
-        }
-    }
-
-    public static String validInput(String url) throws MyException {
-        if (Patterns.WEB_URL.matcher(url).matches() || URLUtil.isValidUrl(url)) {
-            if(!(url.startsWith("https://")||url.startsWith("http://"))){
-                return "https://" + url;
-            }
-            return url;
-        }
-
-        throw new MyException("Invalid Input");
-    }
-
     public static String convertStreamToString(InputStream inputStream){
         StringBuilder stringBuilder=new StringBuilder();
         try {
@@ -65,11 +45,5 @@ public final class NetworkUtil {
         String resp = NetworkUtil.convertStreamToString(inputStream);
 
         return resp;
-    }
-
-
-    @Deprecated
-    public static void print(Object o){
-        Log.e("log",String.valueOf(o));
     }
 }
